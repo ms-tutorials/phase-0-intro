@@ -3,9 +3,8 @@
   padding: 0;
   margin: 0;
 }
-body{
-  z-index: 2;
-}
+
+
 nav {
   color: white;
 }
@@ -22,16 +21,31 @@ li {
   background-color: black;
   width: 100%;
   border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: row;
 }
+
+#search-bar{
+  position: relative;
+  left: 50%;
+  top: 0;
+  width: 20%;
+}
+
 
 main {
   display: flex;
   justify-content: center;
-  margin: 15vh 0 0 0;
-  padding: 5vh 0 0 0;
-  height: 30vh;
+  margin: 2vh 0 0 0;
+  padding: 15vh 0 0 0;
+  height: 50vh;
   background-color: black;
   color: white;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: row;
 }
 
 #nav-items {
@@ -40,11 +54,6 @@ main {
   padding: 2vh 1vw 0 2vw;
 }
 
-#search-bar {
-  position: relative;
-  top: 0;
-  left: 70%;
-}
 
 #search-bar > form {
   display: flex;
@@ -59,36 +68,32 @@ form label {
 form input {
   width: 20%;
   border-radius: 20vw;
+  transition: .2s linear 0s;
 }
 
-.main-container{
-  display: flex;
-}
-article{
-  justify-content: flex-end;
-  width: 70%;
+form input:hover{
+  padding-left: 80px;
 }
 
-article, aside{
-  padding: 0 0 0 2vw; 
-  height: 70vh;
+
+article,
+aside {
+  margin: 5vh 3vw 5vh 0;
 }
 
 article{
-  position: relative;
-  margin: 10vh 0 0 0;
-  left: 30%;
-  z-index: 1;
+  width: 80%;
 }
 
-aside{
-  position: relative;
-  top: -70vh;
-  left: 0;
-  width: 30%;
-  margin: 0 2vw 0 0;
+aside {
+  margin: 5vh 2vw 0 2vw;
+  padding: 2vw;
+  width: 20%;
+  height: 40vh;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
+
 .footer-nav {
   display: flex;
   flex-direction: row;
